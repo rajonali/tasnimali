@@ -97,6 +97,19 @@
   .greeting-text-p {
     font-size: 20px;
   }
+
+  .bigimage {
+    display: block;
+    visibility: visible;
+
+  }
+
+  .smallimage {
+    display: none;
+    visibility: hidden;
+
+  }
+
 }
 @media (max-width: 768px) {
   .button-greeting-div {
@@ -120,6 +133,17 @@
 
   .greeting-image-div-img {
     margin-left: 0px;
+  }
+
+
+  .bigimage {
+    display: none;
+    visibility: hidden;
+  }
+
+  .smallimage {
+    display: block;
+    visibility: visible;
   }
 }
 

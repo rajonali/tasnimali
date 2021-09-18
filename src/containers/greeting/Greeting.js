@@ -9,6 +9,9 @@ import Button from "../../components/button/Button";
 
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import AdaptiveImage from 'react-adaptive-image';
+
+
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
@@ -21,12 +24,20 @@ export default function Greeting() {
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div>
-            <div style={{color:'#d9534f', fontFamily: 'Helvetica Neue', fontSize:'20px', backgroundColor: 'transparent', whiteSpace: 'pre-wrap', display:'flex', flex:1, flexDirection: 'column'}}>
+            <div style={{color:'#d9534f', objectFit: 'contain', overflow: 'contain', fontFamily: 'Helvetica Neue', fontSize:'20px', backgroundColor: 'transparent', whiteSpace: 'pre-wrap', display:'flex', flex:1, flexDirection: 'column'}}>
 
-<img style={{ flex:1, display:'flex', maxWidth:'100%', alignSelf:'center'}}
-                src={require("../../assets/images/tasasciilogo.PNG")}
-              ></img>
+{/* <div className="bigimage">
+<img style={{ width:'100%', height:'100%', alignSelf:'center'}}
+    src={require("../../assets/images/bigtasasciilogo.PNG")} 
+  />
+</div>
+*/}
 
+<div className="smallimage">
+<img style={{ width:'100%', height:'100%', alignSelf:'center'}}
+                src={require("../../assets/images/smalltasasciilogo.png")} 
+              />
+</div>
 </div>
 
               <p
